@@ -1,0 +1,44 @@
+[
+  {
+    "item": "Experiencia",
+    "icon": "icons:star",
+    "content": [
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      },
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      },
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      }
+    ]
+  },
+  {
+    "item": "Conocimientos",
+    "icon": "icons:star",
+    "content": [
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      },
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      },
+      {
+        "company": "Beeva",
+        "imgUrl": "hola.jpg",
+        "description": "Hola, esto es una descripción"
+      }
+    ]
+  }
+]

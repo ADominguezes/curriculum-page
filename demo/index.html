@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>curriculum-page demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+    window.Polymer = {
+      dom: 'shadow',
+      lazyRegister: 'true',
+      useNativeCSSProperties: 'true'
+    }
+
+  </script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../adom-demo/adom-demo.html">
+  <link rel="import" href="../../iron-icons/iron-icons.html">
+  <link rel="import" href="../curriculum-page.html">
+
+  <style is="custom-style" include="demo-pages-shared-styles">
+    /*Common styles*/
+
+    demo-snippet {
+      --demo-snippet-demo: {
+        display: block;
+      };
+    }
+
+  </style>
+</head>
+
+<body>
+  <adom-demo id="demo" option-selected="0" hide-menu>
+    <demo-snippet id="view0" data-heading="Hello World" data-description="this is a reserved space for a description">
+      <template is="dom-bind" id="demo0">
+        <curriculum-page data="[[experiencia]]"></curriculum-page>
+        <script>
+          (function (demo) {
+            var dataCurriculum = [{
+                "item": "Experience",
+                "icon": "icons:star",
+                "content": [{
+                    "company": "Jewish Museum",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis possimus velit impedit sapiente fugit accusantium obcaecati, enim doloribus ducimus vel optio unde, ea nulla praesentium cupiditate excepturi expedita. Unde, quod?"
+                  },
+                  {
+                    "company": "Yeltsin Center",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus temporibus nihil deserunt itaque. Hic, enim officiis doloribus quam, consectetur atque corporis nostrum ad voluptate iure modi vel pariatur. Vero, iste."
+                  },
+                  {
+                    "company": "Blundstone",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, fugit eligendi perferendis. Incidunt eos, aperiam accusamus, cupiditate doloremque ullam necessitatibus enim delectus harum, maxime vel, eaque unde autem a."
+                  },
+                  {
+                    "company": "Pulsar",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, architecto! Expedita nobis accusamus sequi harum unde dolorum! Dignissimos, porro consequatur harum at, dolorum incidunt distinctio minus molestias, eum animi veniam!"
+                  }
+                ]
+              },
+              {
+                "item": "studies",
+                "icon": "icons:book",
+                "content": [{
+                    "studio": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta."
+                  },
+                  {
+                    "studio": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut harum non atque, debitis ipsam natus quisquam!"
+                  },
+                  {
+                    "studio": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At placeat veritatis recusandae optio, a exercitationem hic commodi cumque non nam perferendis aliquam? Excepturi ipsum debitis, temporibus numquam perspiciatis error placeat?"
+                  },
+                ]
+              },
+              {
+                "item": "Conocimientos",
+                "icon": "icons:star",
+                "content": [{
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  },
+                  {
+                    "knowledge": "lorem ipsum",
+                    "imgUrl": "http://lorempixel.com/100/100/"
+                  }
+                ]
+              }
+            ]
+            demo.experiencia = dataCurriculum;
+          }(document.querySelector('#demo0')))
+
+        </script>
+      </template>
+    </demo-snippet>
+  </adom-demo>
+</body>
+
+</html>

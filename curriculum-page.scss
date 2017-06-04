@@ -1,0 +1,67 @@
+:host([hidden]) {
+  display: none;
+}
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  margin: 1em;
+  --paper-tabs-selection-bar-color: var(--adom-demo-paper-tabs-bar-color, #666);
+}
+
+iron-icon {
+  padding-right: 0.5em;
+  --iron-icon-height: 20px;
+  --iron-icon-width: 20px;
+  --iron-icon-fill-color: #666;
+}
+
+iron-pages {
+  margin: 2em 1em;
+}
+iron-pages .iron-selected {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.tab {
+  color: #666;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.itemExperience {
+  padding: 0.5em;
+  border-bottom: 1px solid #e5e5e5;
+  --adom-card-body-media-width: 100px;
+  --adom-card-body-content-width: calc(100% - var(--adom-card-body-media-width));
+  --adom-card-body-content-subheading-color: #666;
+}
+
+.itemStudio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &__wrapper {
+    width: 50%;
+    &__card {
+      --adom-card-body-media-width: 30px;
+      --adom-card-body-content-width: calc(100% - var(--adom-card-body-media-width));
+      --adom-card-body-content-subheading-color: #666;
+    }
+  }
+}
+
+.itemKnowledge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &__card {
+    text-align: center;
+    margin-left: 1em;
+  }
+}
