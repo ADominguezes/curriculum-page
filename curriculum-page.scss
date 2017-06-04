@@ -7,51 +7,76 @@
   box-sizing: border-box;
   margin: 1em;
   --paper-tabs-selection-bar-color: var(--adom-demo-paper-tabs-bar-color, #666);
+  @apply(--curriculum-page);
 }
 
 iron-icon {
   padding-right: 0.5em;
   --iron-icon-height: 20px;
   --iron-icon-width: 20px;
-  --iron-icon-fill-color: #666;
+  --iron-icon-fill-color: var(--curriculum-page-icon-color, #666);
+  @apply(--curriculum-page-icons);
 }
 
 iron-pages {
   margin: 2em 1em;
+  @apply(--curriculum-page-iron-pages);
 }
 iron-pages .iron-selected {
   display: flex;
   flex-direction: column-reverse;
+  @apply(--curriculum-page-icons-selected);
 }
 
 .tab {
-  color: #666;
+  color: var(--curriculum-page-tab-color,#666);
   font-size: 16px;
   font-weight: lighter;
   width: 100%;
   border: none;
-  background-color: transparent;
+  background-color: var(--curriculum-page-tab-color, transparent);
   cursor: pointer;
+  @apply(--curriculum-page-tab);
+}
+
+adom-card {
+  --adom-card-bg-color: var(--curriculum-page-card-bg-color, transparent);
+  --adom-card-body-bg-color: var(--curriculum-page-card-body-bg-color, transparent);
+  --adom-card-header-heading-color: var(--curriculum-page-card-body-heading-color, #212121);
+  --adom-card-body-content-subheading-font-size: rem(14px);
+  --adom-card-body-content-heading: unquote("{
+    font-size: 16px;
+    font-weight: normal;
+  }");
+  --adom-card-body-content-subheading: unquote("{
+    font-weight: lighter;
+  }");
+  @apply(--curriculum-page-adom-card);
 }
 
 .itemExperience {
   padding: 0.5em;
   border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
   --adom-card-body-media-width: 100px;
   --adom-card-body-content-width: calc(100% - var(--adom-card-body-media-width));
-  --adom-card-body-content-subheading-color: #666;
+  --adom-card-body-content-subheading-color: var(--curriculum-page-card-body-media-color, #666);
+  @apply(--curriculum-page-itemExperience);
 }
 
 .itemStudio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @apply(--curriculum-page-itemStudio);
   &__wrapper {
     width: 50%;
+    @apply(--curriculum-page-itemStudio-wrapper);
     &__card {
       --adom-card-body-media-width: 30px;
       --adom-card-body-content-width: calc(100% - var(--adom-card-body-media-width));
-      --adom-card-body-content-subheading-color: #666;
+      --adom-card-body-content-subheading-color: var(--curriculum-page-itemStudio-card-color, #666);
+      @apply(--curriculum-page-itemStudio-card);
     }
   }
 }
@@ -60,8 +85,10 @@ iron-pages .iron-selected {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @apply(--curriculum-page-itemknoledge);
   &__card {
     text-align: center;
     margin-left: 1em;
+    @apply(--curriculum-page-itemknoledge-card);
   }
 }

@@ -7,7 +7,97 @@
 
 <!--
 `curriculum-page`
-A component description
+curriculum page is a page for ADominguez page
+
+__Example__
+
+```html
+<curriculum-page data="[[experiencia]]"></curriculum-page>
+```
+
+__Data Json__
+
+```json
+[{
+    "item": "Experience",
+    "icon": "icons:star",
+    "content": [{
+        "company": "Jewish Museum",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis possimus velit impedit sapiente fugit accusantium obcaecati, enim doloribus ducimus vel optio unde, ea nulla praesentium cupiditate excepturi expedita. Unde, quod?"
+      },
+      {
+        "company": "Yeltsin Center",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus temporibus nihil deserunt itaque. Hic, enim officiis doloribus quam, consectetur atque corporis nostrum ad voluptate iure modi vel pariatur. Vero, iste."
+      },
+      {
+        "company": "Blundstone",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, fugit eligendi perferendis. Incidunt eos, aperiam accusamus, cupiditate doloremque ullam necessitatibus enim delectus harum, maxime vel, eaque unde autem a."
+      },
+      {
+        "company": "Pulsar",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, architecto! Expedita nobis accusamus sequi harum unde dolorum! Dignissimos, porro consequatur harum at, dolorum incidunt distinctio minus molestias, eum animi veniam!"
+      }
+    ]
+  },
+  {
+    "item": "studies",
+    "icon": "icons:book",
+    "content": [{
+        "studio": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dicta."
+      },
+      {
+        "studio": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut harum non atque, debitis ipsam natus quisquam!"
+      },
+      {
+        "studio": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At placeat veritatis recusandae optio, a exercitationem hic commodi cumque non nam perferendis aliquam? Excepturi ipsum debitis, temporibus numquam perspiciatis error placeat?"
+      },
+    ]
+  },
+  {
+    "item": "Conocimientos",
+    "icon": "icons:star",
+    "content": [{
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      },
+      {
+        "knowledge": "lorem ipsum",
+        "imgUrl": "http://lorempixel.com/100/100/"
+      }
+    ]
+  }
+]
+```
 
 @demo demo/index.html
 -->
@@ -28,7 +118,7 @@ A component description
       <div>
         <template is="dom-repeat" items="[[dataContent]]">
           <adom-card class="itemExperience" no-footer no-header heading="[[item.company]]" subheading="[[item.description]]" img-url="[[item.imgUrl]]"
-            img-height="100" img-width="100" circle></adom-card>
+            img-height="100" img-width="100" circle aria-heading-level="3"></adom-card>
         </template>
       </div>
       <div>
@@ -36,7 +126,7 @@ A component description
           <template is="dom-repeat" items="[[dataContent]]">
             <div class="itemStudio__wrapper">
               <adom-card class="itemStudio__wrapper__card" no-footer no-header heading="[[item.studio]]" subheading="[[item.description]]" img-url="[[item.imgUrl]]"
-            img-height="30" img-width="30" circle>
+            img-height="30" img-width="30" aria-heading-level="3" circle></adom-card>
             </div>
           </template>
         </div>
@@ -45,7 +135,7 @@ A component description
         <div class="itemKnowledge">
           <template is="dom-repeat" items="[[dataContent]]">
             <adom-card class="itemKnowledge__card" no-footer no-header heading="[[item.knowledge]]" img-url="[[item.imgUrl]]" column
-              img-height="150" img-width="150" circle>
+              img-height="150" img-width="150" circle aria-heading-level="3"></adom-card>
           </template>
         </div>
       </div>
