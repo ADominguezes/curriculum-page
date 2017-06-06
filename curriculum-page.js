@@ -19,6 +19,11 @@
         value: function() {
           return [];
         }
+      },
+      loading: {
+        type: Boolean,
+        value: false,
+        reflectToAttrtibute: true
       }
     },
 

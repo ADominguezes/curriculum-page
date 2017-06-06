@@ -3,6 +3,7 @@
 <link rel="import" href="../iron-pages/iron-pages.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../adom-card/adom-card.html">
+<link rel="import" href="../loading-page/loading-page.html">
 <link rel="import" href="curriculum-page-styles.html">
 
 <!--
@@ -105,42 +106,46 @@ __Data Json__
 <dom-module id="curriculum-page">
   <style include="curriculum-page-styles curriculum-page-shared-styles"></style>
   <template>
-    <paper-tabs id="paperTabs" selected="{{selected}}" scrollable fit-container hide-scroll-buttons noink>
-      <template is="dom-repeat" items="[[data]]">
-        <paper-tab>
-          <button class="tab">
+    <template is="dom-if" if="[[loading]]">
+      <loading-page></loading-page>
+    </template>
+    <template is="dom-if" if="[[!loading]]">
+      <paper-tabs id="paperTabs" selected="{{selected}}" scrollable fit-container hide-scroll-buttons noink>
+        <template is="dom-repeat" items="[[data]]">
+          <paper-tab>
+            <button class="tab">
           <iron-icon icon="[[item.icon]]"></iron-icon> [[item.item]]
         </button>
-        </paper-tab>
-      </template>
-    </paper-tabs>
-    <iron-pages selected="[[selected]]">
-      <div>
-        <template is="dom-repeat" items="[[dataContent]]">
-          <adom-card class="itemExperience" no-footer no-header heading="[[item.company]]" subheading="[[item.description]]" img-url="[[item.imgUrl]]"
-            img-height="100" img-width="100" circle aria-heading-level="3"></adom-card>
+          </paper-tab>
         </template>
-      </div>
-      <div>
-        <div class="itemStudio">
+      </paper-tabs>
+      <iron-pages selected="[[selected]]">
+        <div>
           <template is="dom-repeat" items="[[dataContent]]">
-            <div class="itemStudio__wrapper">
-              <adom-card class="itemStudio__wrapper__card" no-footer no-header heading="[[item.studio]]" subheading="[[item.description]]" img-url="[[item.imgUrl]]"
-            img-height="30" img-width="30" aria-heading-level="3" circle></adom-card>
-            </div>
+            <adom-card class="itemExperience" no-footer no-header heading="[[item.company]]" subheading="[[item.description]]" img-url="[[item.imgUrl]]"
+              img-height="100" img-width="100" circle aria-heading-level="3"></adom-card>
           </template>
         </div>
-      </div>
-      <div>
-        <div class="itemKnowledge">
-          <template is="dom-repeat" items="[[dataContent]]">
-            <adom-card class="itemKnowledge__card" no-footer no-header heading="[[item.knowledge]]" img-url="[[item.imgUrl]]" column
-              img-height="150" img-width="150" circle aria-heading-level="3"></adom-card>
-          </template>
+        <div>
+          <div class="itemStudio">
+            <template is="dom-repeat" items="[[dataContent]]">
+              <div class="itemStudio__wrapper">
+                <adom-card class="itemStudio__wrapper__card" no-footer no-header heading="[[item.studio]]" subheading="[[item.description]]"
+                  img-url="[[item.imgUrl]]" img-height="30" img-width="30" aria-heading-level="3" circle></adom-card>
+              </div>
+            </template>
+          </div>
         </div>
-      </div>
-    </iron-pages>
-
+        <div>
+          <div class="itemKnowledge">
+            <template is="dom-repeat" items="[[dataContent]]">
+              <adom-card class="itemKnowledge__card" no-footer no-header heading="[[item.knowledge]]" img-url="[[item.imgUrl]]" column
+                img-height="150" img-width="150" circle aria-heading-level="3"></adom-card>
+            </template>
+          </div>
+        </div>
+      </iron-pages>
+    </template>
   </template>
   <script src="curriculum-page.js"></script>
 </dom-module>

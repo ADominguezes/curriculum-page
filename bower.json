@@ -10,7 +10,8 @@
     "paper-tabs": "PolymerElements/paper-tabs#^1.8.0",
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
     "iron-icon": "PolymerElements/iron-icon#^1.0.13",
-    "adom-card": "https://github.com/ADominguezes/adom-card.git"
+    "adom-card": "https://github.com/ADominguezes/adom-card.git",
+    "loading-page": "https://github.com/ADominguezes/loading-page.git"
   },
   "devDependencies": {
     "adom-demo": "https://github.com/ADominguezes/adom-demo.git#^1.0.1",

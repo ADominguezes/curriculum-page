@@ -39,7 +39,7 @@
   <adom-demo id="demo" option-selected="0" hide-menu>
     <demo-snippet id="view0" data-heading="Basic curriculum-page">
       <template is="dom-bind" id="demo0">
-        <curriculum-page data="[[experiencia]]"></curriculum-page>
+        <curriculum-page data="[[experiencia]]" id="component0" loading></curriculum-page>
         <script>
           (function (demo) {
             var dataCurriculum = [{
@@ -121,6 +121,9 @@
                 ]
               }
             ]
+            demo.async(function() {
+              demo.$.component0.loading = false
+            }, 2000);
             demo.experiencia = dataCurriculum;
           }(document.querySelector('#demo0')))
 
