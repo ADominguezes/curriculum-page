@@ -107,7 +107,7 @@ __Data Json__
   <style include="curriculum-page-styles curriculum-page-shared-styles"></style>
   <template>
     <template is="dom-if" if="[[loading]]">
-      <loading-page></loading-page>
+      <loading-page paused="[[!loading]]"></loading-page>
     </template>
     <template is="dom-if" if="[[!loading]]">
       <paper-tabs id="paperTabs" selected="{{selected}}" scrollable fit-container hide-scroll-buttons noink>
